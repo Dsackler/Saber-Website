@@ -2,6 +2,7 @@ import './App.css';
 import {Parallax} from 'react-parallax';
 import carPic from "./Images/car.jpeg";
 import fishPic from "./Images/fish.jpeg";
+import NavBar from "./Components/NavBar";
 
 
 const iStyle = {
@@ -15,14 +16,15 @@ const iStyle = {
 
 function App() {
   return (
-    <div className="App">
+    <div>
+      <NavBar />
       <Parallax bgImage = {carPic} strength = {500}>
         <div className = "section">
           <div style = {iStyle}>HTML in parallax</div>
         </div>
       </Parallax>
       <h1>Please help</h1>
-      <Parallax bgImage = {fishPic} blur={{ min: -15, max: 15 }}>
+      <Parallax bgImage = {fishPic} strength = {500} blur={{ min: -15, max: 15 }}>
         <div className = "section">
           <div style = {iStyle}>HTML in parallax</div>
         </div>
