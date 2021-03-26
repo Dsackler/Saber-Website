@@ -4,9 +4,9 @@ import Property1 from "./Images/Property1.jpg";
 import Property2 from "./Images/Property2.jpg";
 import Property3 from "./Images/Property3.jpg";
 import NavBar from "./Components/NavBar"
+import { Button } from "react-bootstrap";
 
 const iStyle = {
-  background: '#fff',
   position: 'absolute',
   left: '50%',
   top: '50%',
@@ -18,10 +18,11 @@ function App() {
   return (
     <div>
       <NavBar />
-      <h1>hi</h1>
-      <Parallax bgImage = {Property1} strength = {100} >
+      <Parallax bgImage = {Property1} strength = {100} blur={{ min: -15, max: 15 }}>
         <div className = "section">
-          <div style = {iStyle}>HTML in parallax</div>
+          <div style = {iStyle}>
+          <Button variant="outline-light">Gallery</Button>{' '}
+          </div>
         </div>
       </Parallax>
       <h1>Please help</h1>
